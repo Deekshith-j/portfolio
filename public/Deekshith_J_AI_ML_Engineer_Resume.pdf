@@ -1,0 +1,200 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Length 4185 >>
+stream
+0.05 0.05 0.08 rg
+0 770 595.28 72 re f
+0.54 0.25 0.95 rg
+0 766 595.28 4 re f
+BT
+/F1 22 Tf
+1 1 1 rg
+40 808 Td
+(DEEKSHITH J) Tj
+ET
+BT
+/F2 10 Tf
+0.8 0.75 0.95 rg
+40 788 Td
+(AI & MACHINE LEARNING ENGINEER  |  OPENAI x NXTWAVE FINALIST) Tj
+ET
+BT
+/F2 8.5 Tf
+0.3 0.3 0.35 rg
+40 746 Td
+(Email: deekshithj188@gmail.com  |  Phone: +91 95358 92361  |  Bengaluru, India  |  GitHub: @deekshith  |  LinkedIn: in/deekshith-j) Tj
+ET
+0.85 0.85 0.88 RG
+1 w
+40 736 m 555 736 l S
+BT
+/F1 11 Tf
+0.35 0.1 0.85 rg
+40 716 Td
+(PROFESSIONAL SUMMARY) Tj
+ET
+BT
+/F2 9.5 Tf
+0.15 0.15 0.18 rg
+40 698 Td
+(Computer Science undergraduate specializing in Artificial Intelligence and Data Science. Driven AI/ML engineer) Tj
+0 -14 Td
+(focused on engineering grounded Retrieval-Augmented Generation \(RAG\) architectures, autonomous agent workflows,) Tj
+0 -14 Td
+(and reliable backend systems using Python, LangChain, and LangSmith. Experienced in reducing hallucinations and optimizing LLMs.) Tj
+ET
+BT
+/F1 11 Tf
+0.35 0.1 0.85 rg
+40 644 Td
+(HONORS & NATIONAL RECOGNITIONS) Tj
+ET
+BT
+/F1 9.5 Tf
+0.1 0.1 0.1 rg
+40 626 Td
+(OpenAI x NxtWave Buildathon Finalist) Tj
+/F2 9.5 Tf
+ (National Level)
+ Tj
+0 -14 Td
+(• Competed among top student developer teams across India to architect and build an autonomous AI-driven application.) Tj
+0 -13 Td
+(• Engineered rapid prototyping, prompt grounding, and API integrations under rigorous hackathon constraints.) Tj
+ET
+BT
+/F1 11 Tf
+0.35 0.1 0.85 rg
+40 572 Td
+(FEATURED AI & SOFTWARE PROJECTS) Tj
+ET
+BT
+/F1 10 Tf
+0.1 0.1 0.1 rg
+40 554 Td
+(Smart Queue Management System  |  Python, Artificial Intelligence) Tj
+/F2 9 Tf
+0 -13 Td
+(• Developed an intelligent queue and token scheduling platform reducing physical wait times in high-traffic environments.) Tj
+0 -12 Td
+(• Implemented automated customer prioritization scoring and real-time dynamic queue rebalancing algorithms.) Tj
+ET
+BT
+/F1 10 Tf
+0.1 0.1 0.1 rg
+40 514 Td
+(AI Scholarship Recommendation Agent  |  Python, LLMs, Prompt Engineering) Tj
+/F2 9 Tf
+0 -13 Td
+(• Built an intelligent recommendation agent that analyzes student eligibility criteria and maps optimal scholarship opportunities.) Tj
+0 -12 Td
+(• Designed specialized system prompts and context extractors to provide structured, explainable match justifications.) Tj
+ET
+BT
+/F1 10 Tf
+0.1 0.1 0.1 rg
+40 474 Td
+(Enterprise HR Agent  |  Python, RAG, LangChain, LangSmith) Tj
+/F2 9 Tf
+0 -13 Td
+(• Engineered an end-to-end Retrieval-Augmented Generation \(RAG\) assistant for complex company policy and HR knowledge bases.) Tj
+0 -12 Td
+(• Integrated LangSmith tracing and evaluation pipelines to monitor latency, inspect token usage, and eliminate hallucinations.) Tj
+ET
+BT
+/F1 11 Tf
+0.35 0.1 0.85 rg
+40 432 Td
+(TECHNICAL SKILLS) Tj
+ET
+BT
+/F1 9 Tf
+0.15 0.15 0.15 rg
+40 414 Td
+(Programming Languages:) Tj
+/F2 9 Tf
+( Python, C++, SQL, HTML, CSS) Tj
+0 -14 Td
+/F1 9 Tf
+(AI & LLM Frameworks:) Tj
+/F2 9 Tf
+( RAG \(Retrieval-Augmented Generation\), LangChain, LangSmith, Prompt Engineering, Vector Stores) Tj
+0 -14 Td
+/F1 9 Tf
+(Core Competencies:) Tj
+/F2 9 Tf
+( Data Structures & Algorithms, Object-Oriented Programming, API Design, System Architecture, Git/GitHub) Tj
+ET
+BT
+/F1 11 Tf
+0.35 0.1 0.85 rg
+40 354 Td
+(EDUCATION) Tj
+ET
+BT
+/F1 9.5 Tf
+0.1 0.1 0.1 rg
+40 336 Td
+(Bachelor of Technology \(B.Tech\) — Artificial Intelligence and Data Science) Tj
+/F2 9 Tf
+0 -13 Td
+(Sanjay Ghodawat University  |  2025 – 2029 \(Expected\)) Tj
+0 -12 Td
+(Focus: Autonomous Agents, Deep Learning Foundations, Distributed Data Systems, Advanced Algorithms) Tj
+ET
+BT
+/F1 11 Tf
+0.35 0.1 0.85 rg
+40 286 Td
+(CERTIFICATIONS) Tj
+ET
+BT
+/F2 9 Tf
+0.15 0.15 0.18 rg
+40 268 Td
+(• Generative AI & Large Language Models — DeepLearning Academy \(Prompt Engineering & RAG Pipelines\)) Tj
+0 -13 Td
+(• Python for Data Science — DataScience Institute \(NumPy, Pandas & Analytical Data Processing\)) Tj
+0 -13 Td
+(• LangChain & LangSmith Agent Frameworks — Advanced Observability & Evaluation for Production LLMs) Tj
+ET
+0.88 0.88 0.9 RG
+1 w
+40 50 m 555 50 l S
+BT
+/F2 7.5 Tf
+0.5 0.5 0.55 rg
+40 36 Td
+(Deekshith J — AI & ML Engineer Portfolio Dossier  |  Verified & Digitally Generated 2026) Tj
+ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000257 00000 n 
+0000000332 00000 n 
+0000000402 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+4639
+%%EOF
