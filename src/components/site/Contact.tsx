@@ -188,14 +188,14 @@ const LINKS = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com",
-    value: "in/deekshith-j",
+    href: "https://www.linkedin.com/in/deekshith-j-5773b336b/",
+    value: "in/deekshith-j-5773b336b",
     icon: LinkedinGlassIcon,
   },
   {
     label: "GitHub",
-    href: "https://github.com",
-    value: "@deekshith",
+    href: "https://github.com/Deekshith-j",
+    value: "@Deekshith-j",
     icon: GithubGlassIcon,
   },
 ];

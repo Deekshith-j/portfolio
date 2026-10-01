@@ -8,16 +8,21 @@ export function Education() {
 
   const POINTS = [
     {
-      year: "2025",
-      label: "Programme begins",
-      detail: "B.Tech — Artificial Intelligence and Data Science",
+      year: "2025–29",
+      label: "B.Tech Programme",
+      detail: "B.Tech in Artificial Intelligence and Data Science — Sanjay Ghodawat University",
     },
     {
-      year: "Now",
-      label: "In progress",
-      detail: "Building AI applications with Python, RAG and LLMs",
+      year: "8.55",
+      label: "Academic Record",
+      detail: "1st Year CGPA: 8.55 • Strong foundational performance in AI & Data Science",
     },
-    { year: "2029", label: "Graduation", detail: "Sanjay Ghodawat University" },
+    {
+      year: "Active",
+      label: "Engineering & Shipping",
+      detail:
+        "Building Voice RAG, Multi-Agent pipelines, and IoT cloud systems with Python & TypeScript",
+    },
   ];
 
   return (

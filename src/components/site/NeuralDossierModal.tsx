@@ -13,59 +13,67 @@ export function openNeuralDossier() {
   }
 }
 
-const RESUME_MARKDOWN = `# DEEKSHITH J — AI & MACHINE LEARNING ENGINEER
-**Location:** Bengaluru, India | **Email:** deekshithj188@gmail.com | **Phone:** +91 95358 92361
-**Profiles:** [GitHub](https://github.com/deekshith) | [LinkedIn](https://linkedin.com/in/deekshith-j)
-**National Honor:** Finalist — OpenAI × NxtWave Buildathon (Top Tier)
+const RESUME_MARKDOWN = `# DEEKSHITH J
+**Aspiring AI/ML Engineer | Python & Web Development**
+**Contact:** +91 9535892361 | **Email:** deekshithj188@gmail.com
+**Profiles:** [LinkedIn](https://www.linkedin.com/in/deekshith-j-5773b336b/) | [GitHub](https://github.com/Deekshith-j)
 
 ---
 
 ## PROFESSIONAL SUMMARY
-Computer Science undergraduate specializing in Artificial Intelligence and Data Science. Engineering end-to-end intelligent systems: Retrieval-Augmented Generation (RAG) architectures, autonomous agent workflows, and scalable backend logic with Python, LangChain, and LangSmith. Passionate about eliminating hallucinations and building grounded, reliable AI products for real-world impact.
-
----
-
-## HONORS & ACHIEVEMENTS
-- **OpenAI × NxtWave Buildathon Finalist (National Level)**
-  - Competed among top student engineering teams across India to architect and ship an autonomous AI solution under strict time and evaluation constraints.
-- **Hackathon Finalist Team (AI Product Track)**
-  - Designed and pitched AI-driven workflow automation tools to industry leaders.
-
----
-
-## FEATURED PROJECTS
-### 1. Smart Queue Management System (Python • Artificial Intelligence)
-- Built an intelligent digital queue and token scheduling platform reducing physical waiting times in high-traffic commercial environments.
-- Developed dynamic customer prioritization scores and real-time algorithmic queue rebalancing.
-
-### 2. AI Scholarship Recommendation Agent (Python • LLMs • Prompt Engineering)
-- Developed an intelligent assistant that processes student academic criteria to match optimal scholarship and financial aid opportunities.
-- Crafted structured system prompts, context extractors, and automated eligibility justifications.
-
-### 3. Enterprise HR Agent (Python • RAG • LangChain • LangSmith)
-- Designed an end-to-end Retrieval-Augmented Generation chatbot to answer complex enterprise HR and policy queries with zero hallucination.
-- Implemented LangSmith tracing and observability pipelines to monitor token usage, latency, and retrieval accuracy.
+B.Tech student in Artificial Intelligence and Data Science who builds and ships practical projects, from an IoT water-quality monitor with a live cloud dashboard to a multilingual voice-based RAG assistant. National-level participant in the OpenAI x NxtWave Buildathon. Seeking an AI/ML or full-stack internship.
 
 ---
 
 ## TECHNICAL SKILLS
-- **Languages:** Python, C++, SQL, HTML, CSS
-- **AI & LLM Tools:** RAG, LangChain, LangSmith, Prompt Engineering, Vector Stores, OpenAI API
-- **Foundations:** Data Structures & Algorithms (DSA), OOP, REST APIs, Git, GitHub
+- **Languages:** Python, JavaScript, C++, HTML, CSS, SQLite
+- **Backend & Web:** Node.js, Express.js, REST APIs, React, Next.js, Tailwind CSS, Supabase, Firebase
+- **AI / ML:** LLM applications, Basic RAG, Prompt Engineering
+- **Tools:** Git, GitHub, Vercel, Arduino, ESP32
+- **Others:** Basic DSA (C++)
+
+---
+
+## FEATURED PROJECTS
+
+### 1. Crystal-Agent – Voice Question-Answering Assistant (Personal Project)
+- **Tech Stack:** Python, FAISS, Next.js, Docker
+- Voice assistant that answers questions in English, Hindi, Kannada, and Marathi using a large document collection.
+- Searches in two ways (by keywords and by meaning) so answers come from real data, and says "no answer" when it has none.
+- Fast: finds the best answer in about 157 ms.
+
+### 2. HydroVision AI – Water Quality Monitor (Group Project • Team Lead)
+- **Tech Stack:** Arduino, ESP32, Firebase, React, TypeScript
+- Sensors measure water pH, dissolved solids, cloudiness, and temperature.
+- An ESP32 sends the readings to the cloud, and a web dashboard shows live data, a map, and alerts when water is unsafe.
+- **Role:** Team Lead — Hardware, backend telemetry, and database.
+
+### 3. AI Scholarship Agent (Personal Project)
+- **Tech Stack:** JavaScript, Node.js, Express.js, Google Gemini API
+- Finds scholarships for a student and ranks them by how well they match the student profile.
+- Uses specialized AI agents for each task: search, eligibility, essay assistance, and deadline tracking.
+
+### 4. JanSeva – Government Service Booking (Group Project • Team Lead)
+- **Tech Stack:** TypeScript, Supabase, Vercel, React
+- Website where citizens book government services and join queues online, cutting down physical waiting times.
+- **Role:** Team Lead — Backend infrastructure, queue algorithms, and database.
+
+---
+
+## ACHIEVEMENTS
+- **National-Level Participant, OpenAI × NxtWave Buildathon** — Built an AI-driven solution with a team under time constraints.
 
 ---
 
 ## EDUCATION
-- **Bachelor of Technology (B.Tech) — AI & Data Science**
-  Sanjay Ghodawat University (2025 – 2029 Expected)
-  Focus: Autonomous Agent Architectures, Deep Learning, Advanced Data Systems
+- **B.Tech in Artificial Intelligence and Data Science** (Aug 2025 – Jun 2029)
+  Sanjay Ghodawat University
+  **1st Year CGPA: 8.55**
 
 ---
 
-## CERTIFICATIONS
-- Generative AI & Large Language Models — DeepLearning Academy
-- Python for Data Science — DataScience Institute
-- LangChain & LangSmith Agent Frameworks — Advanced LLM Observability
+## CORE COMPETENCIES
+Communication • Leadership • Teamwork • Analytical Thinking • Adaptability
 `;
 
 export function NeuralDossierModal() {
@@ -318,17 +326,17 @@ export function NeuralDossierModal() {
                       </p>
                     </div>
                     <div className="p-4 rounded-xl bg-card/60 border border-border/70 text-center">
-                      <span className="text-xl sm:text-2xl font-black text-foreground">98%</span>
+                      <span className="text-xl sm:text-2xl font-black text-foreground">8.55</span>
                       <p className="mt-1 font-mono text-[0.64rem] uppercase tracking-wider text-muted-foreground">
-                        ATS Relevance
+                        1st Year CGPA
                       </p>
                     </div>
                     <div className="p-4 rounded-xl bg-card/60 border border-border/70 text-center">
                       <span className="text-xl sm:text-2xl font-black text-foreground">
-                        3+ PRODUCTION
+                        4 SHIPPED
                       </span>
                       <p className="mt-1 font-mono text-[0.64rem] uppercase tracking-wider text-muted-foreground">
-                        AI Architectures
+                        Practical Projects
                       </p>
                     </div>
                     <div className="p-4 rounded-xl bg-card/60 border border-border/70 text-center">
@@ -336,7 +344,7 @@ export function NeuralDossierModal() {
                         2025–29
                       </span>
                       <p className="mt-1 font-mono text-[0.64rem] uppercase tracking-wider text-muted-foreground">
-                        B.Tech AI Degree
+                        Sanjay Ghodawat Univ
                       </p>
                     </div>
                   </div>
@@ -349,17 +357,25 @@ export function NeuralDossierModal() {
                     <div className="flex flex-wrap gap-2">
                       {[
                         "Python",
-                        "RAG",
-                        "LangChain",
-                        "LangSmith",
-                        "LLMs",
-                        "Prompt Engineering",
+                        "JavaScript",
                         "C++",
-                        "Data Structures",
-                        "Vector DBs",
-                        "API Integration",
-                        "NLP",
+                        "React",
+                        "Next.js",
+                        "Node.js",
+                        "Express.js",
+                        "Supabase",
+                        "Firebase",
+                        "Arduino",
+                        "ESP32",
+                        "Docker",
+                        "FAISS",
+                        "LLM Applications",
+                        "Basic RAG",
+                        "Prompt Engineering",
                         "Git & GitHub",
+                        "REST APIs",
+                        "SQLite",
+                        "Basic DSA",
                       ].map((skill) => (
                         <span
                           key={skill}
@@ -374,39 +390,50 @@ export function NeuralDossierModal() {
                   {/* Projects Highlight */}
                   <div className="space-y-3">
                     <h4 className="font-mono text-xs uppercase tracking-[0.2em] text-signal font-semibold">
-                      Grounded AI Deployments
+                      Featured Practical Projects
                     </h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       <div className="p-4 rounded-xl bg-card/60 border border-border">
                         <span className="text-xs font-mono font-semibold text-purple-600 dark:text-purple-400">
-                          01 • QUEUE INTELLIGENCE
+                          01 • VOICE RAG & FAISS
                         </span>
-                        <h5 className="font-bold text-sm mt-1">Smart Queue System</h5>
+                        <h5 className="font-bold text-sm mt-1">Crystal-Agent</h5>
                         <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
-                          Dynamic token prioritization and real-time scheduling reducing physical
-                          wait times.
+                          Multilingual voice QA assistant (EN, HI, KN, MR) with dual hybrid search
+                          and ~157ms answer retrieval.
                         </p>
                       </div>
 
                       <div className="p-4 rounded-xl bg-card/60 border border-border">
                         <span className="text-xs font-mono font-semibold text-purple-600 dark:text-purple-400">
-                          02 • LLM REASONING
+                          02 • IOT & TELEMETRY (LEAD)
                         </span>
-                        <h5 className="font-bold text-sm mt-1">Scholarship Agent</h5>
+                        <h5 className="font-bold text-sm mt-1">HydroVision AI</h5>
                         <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
-                          Intelligent matching of students to scholarships with explainable
-                          eligibility mapping.
+                          IoT water quality telemetry system with ESP32 sensor transmission,
+                          Firebase cloud, and live alert dashboard.
                         </p>
                       </div>
 
                       <div className="p-4 rounded-xl bg-card/60 border border-border">
                         <span className="text-xs font-mono font-semibold text-purple-600 dark:text-purple-400">
-                          03 • RAG + OBSERVABILITY
+                          03 • MULTI-AGENT GEMINI
                         </span>
-                        <h5 className="font-bold text-sm mt-1">Enterprise HR Agent</h5>
+                        <h5 className="font-bold text-sm mt-1">AI Scholarship Agent</h5>
                         <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
-                          Knowledge base retrieval chatbot with LangSmith evaluation to eliminate
-                          hallucination.
+                          Multi-agent system handling discovery, eligibility reasoning, essay
+                          drafting, and deadline tracking for students.
+                        </p>
+                      </div>
+
+                      <div className="p-4 rounded-xl bg-card/60 border border-border">
+                        <span className="text-xs font-mono font-semibold text-purple-600 dark:text-purple-400">
+                          04 • PUBLIC SERVICES (LEAD)
+                        </span>
+                        <h5 className="font-bold text-sm mt-1">JanSeva Service Booking</h5>
+                        <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
+                          Digital government service reservation and virtual queue management system
+                          cutting down in-person waiting times.
                         </p>
                       </div>
                     </div>

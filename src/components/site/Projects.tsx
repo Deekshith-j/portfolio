@@ -9,36 +9,73 @@ type Project = {
   description: string;
   flow: string[];
   note?: string;
+  github?: string;
 };
 
 const PROJECTS: Project[] = [
   {
     index: "01",
-    title: "SMART QUEUE MANAGEMENT SYSTEM",
-    label: "AI-Powered Queue Intelligence",
-    tech: "Python • Artificial Intelligence",
+    title: "CRYSTAL-AGENT",
+    label: "Multilingual Voice QA Assistant • Personal Project",
+    tech: "Python • FAISS • Next.js • Docker • RAG",
     description:
-      "An AI-powered digital queue and token management platform designed to reduce physical wait times and streamline customer flow.",
-    flow: ["TOKEN ISSUED", "PRIORITY SCORE", "QUEUE REBALANCE", "SERVED"],
+      "Voice assistant that answers questions in English, Hindi, Kannada, and Marathi using a large document collection. Combines keyword and semantic meaning search so answers come from real data with strict no-hallucination fallback.",
+    flow: [
+      "VOICE INPUT (4 LANGUAGES)",
+      "HYBRID SEARCH (FAISS)",
+      "SEMANTIC CONTEXT MATCH",
+      "SUB-160ms ANSWER DISPATCH",
+    ],
+    note: "Ultra-fast: retrieves grounded answers in ~157 ms.",
+    github: "https://github.com/Deekshith-j",
   },
   {
     index: "02",
-    title: "AI SCHOLARSHIP AGENT",
-    label: "LLM-Powered Opportunity Discovery",
-    tech: "Python • Large Language Models",
+    title: "HYDROVISION AI",
+    label: "IoT Water Quality Monitor • Team Lead",
+    tech: "Arduino • ESP32 • Firebase • React • TypeScript",
     description:
-      "An intelligent assistant that recommends relevant scholarships based on a student's profile and eligibility criteria.",
-    flow: ["STUDENT PROFILE", "ELIGIBILITY ANALYSIS", "LLM REASONING", "SCHOLARSHIP MATCHES"],
+      "IoT water quality monitoring system. Sensors measure water pH, dissolved solids, cloudiness, and temperature. An ESP32 streams telemetry to Firebase, and a web dashboard displays real-time data, maps, and safety alerts.",
+    flow: [
+      "IOT SENSORS (pH / TDS / TEMP)",
+      "ESP32 CLOUD TELEMETRY",
+      "FIREBASE REALTIME DB",
+      "LIVE MAP & HAZARD ALERTS",
+    ],
+    note: "Role: Team Lead — Hardware, backend telemetry & database architecture.",
+    github: "https://github.com/Deekshith-j",
   },
   {
     index: "03",
-    title: "HR AGENT",
-    label: "RAG + LangChain + LangSmith",
-    tech: "Python • RAG • LangChain • LangSmith",
+    title: "AI SCHOLARSHIP AGENT",
+    label: "Autonomous Multi-Agent System • Personal Project",
+    tech: "JavaScript • Node.js • Express.js • Google Gemini API",
     description:
-      "An HR chatbot using Retrieval-Augmented Generation to provide contextually accurate answers to employee and HR queries.",
-    flow: ["USER QUESTION", "RETRIEVAL", "KNOWLEDGE BASE", "CONTEXT", "LLM", "GROUNDED RESPONSE"],
-    note: "Reducing hallucinations. Improving reliability.",
+      "An intelligent platform that finds scholarships for students and ranks them based on profile match. Deploys specialized sub-agents for search, eligibility checks, essay assistance, and deadline tracking.",
+    flow: [
+      "STUDENT ACADEMIC PROFILE",
+      "MULTI-AGENT DISCOVERY",
+      "GEMINI ELIGIBILITY REASONING",
+      "RANKED MATCHES & ESSAY HELP",
+    ],
+    note: "Modular agents dedicated to search, qualification, essay drafting, and deadlines.",
+    github: "https://github.com/Deekshith-j",
+  },
+  {
+    index: "04",
+    title: "JANSEVA",
+    label: "Government Service Booking • Team Lead",
+    tech: "TypeScript • Supabase • Vercel • React",
+    description:
+      "Public digital service platform where citizens book municipal and government appointments and join virtual queues online, drastically minimizing in-person physical waiting times.",
+    flow: [
+      "CITIZEN SERVICE SELECTION",
+      "SUPABASE REALTIME QUEUE",
+      "VIRTUAL TOKEN ALLOCATION",
+      "DESK DISPATCH NOTIFICATION",
+    ],
+    note: "Role: Team Lead — Backend APIs, queue algorithms & Supabase database design.",
+    github: "https://github.com/Deekshith-j",
   },
 ];
 
@@ -108,6 +145,21 @@ function ProjectPanel({ p, idx, total }: { p: Project; idx: number; total: numbe
               <p className="display mt-6 max-w-sm text-lg leading-tight text-signal sm:mt-10 sm:text-xl">
                 {p.note}
               </p>
+            )}
+            {p.github && (
+              <div className="mt-6 sm:mt-8">
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-2 rounded-full border border-foreground/20 dark:border-white/20 bg-background/50 px-4 py-2 font-mono text-[0.68rem] uppercase tracking-[0.2em] text-foreground transition-all duration-300 hover:border-purple-500 hover:text-purple-400 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:scale-105"
+                >
+                  <span>VIEW ON GITHUB</span>
+                  <span className="transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
+                </a>
+              </div>
             )}
           </motion.div>
 
