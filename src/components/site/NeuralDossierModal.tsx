@@ -241,7 +241,11 @@ export function NeuralDossierModal() {
                   className="px-3 sm:px-3.5 py-1.5 rounded-xl border border-border bg-card/80 hover:bg-card text-foreground font-mono text-[0.7rem] sm:text-xs font-medium flex items-center gap-1.5 transition-all hover:scale-105 active:scale-95 cursor-pointer"
                   title="Copy ATS Markdown for AI & Recruiters"
                 >
-                  {copied ? <Check className="h-3.5 w-3.5 text-emerald-500" /> : <Copy className="h-3.5 w-3.5" />}
+                  {copied ? (
+                    <Check className="h-3.5 w-3.5 text-emerald-500" />
+                  ) : (
+                    <Copy className="h-3.5 w-3.5" />
+                  )}
                   <span>{copied ? "Copied!" : "Copy ATS"}</span>
                 </button>
 
@@ -314,9 +318,7 @@ export function NeuralDossierModal() {
                       </p>
                     </div>
                     <div className="p-4 rounded-xl bg-card/60 border border-border/70 text-center">
-                      <span className="text-xl sm:text-2xl font-black text-foreground">
-                        98%
-                      </span>
+                      <span className="text-xl sm:text-2xl font-black text-foreground">98%</span>
                       <p className="mt-1 font-mono text-[0.64rem] uppercase tracking-wider text-muted-foreground">
                         ATS Relevance
                       </p>
@@ -381,7 +383,8 @@ export function NeuralDossierModal() {
                         </span>
                         <h5 className="font-bold text-sm mt-1">Smart Queue System</h5>
                         <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
-                          Dynamic token prioritization and real-time scheduling reducing physical wait times.
+                          Dynamic token prioritization and real-time scheduling reducing physical
+                          wait times.
                         </p>
                       </div>
 
@@ -391,7 +394,8 @@ export function NeuralDossierModal() {
                         </span>
                         <h5 className="font-bold text-sm mt-1">Scholarship Agent</h5>
                         <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
-                          Intelligent matching of students to scholarships with explainable eligibility mapping.
+                          Intelligent matching of students to scholarships with explainable
+                          eligibility mapping.
                         </p>
                       </div>
 
@@ -401,7 +405,8 @@ export function NeuralDossierModal() {
                         </span>
                         <h5 className="font-bold text-sm mt-1">Enterprise HR Agent</h5>
                         <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
-                          Knowledge base retrieval chatbot with LangSmith evaluation to eliminate hallucination.
+                          Knowledge base retrieval chatbot with LangSmith evaluation to eliminate
+                          hallucination.
                         </p>
                       </div>
                     </div>
@@ -410,9 +415,7 @@ export function NeuralDossierModal() {
               ) : (
                 /* ATS Terminal View */
                 <div className="relative rounded-2xl bg-neutral-900 text-neutral-200 p-5 sm:p-6 font-mono text-xs leading-relaxed overflow-x-auto border border-neutral-700 shadow-inner">
-                  <pre className="whitespace-pre-wrap select-text font-mono">
-                    {RESUME_MARKDOWN}
-                  </pre>
+                  <pre className="whitespace-pre-wrap select-text font-mono">{RESUME_MARKDOWN}</pre>
                 </div>
               )}
             </div>

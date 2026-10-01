@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
 import { EngineeringPillars } from "./EngineeringPillars";
 
-
 const LINES = ["ENGINEER", "BUILDER", "PROBLEM SOLVER"];
 
 const STACK = [
@@ -55,7 +54,6 @@ export function About() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="md:col-span-7 md:col-start-6"
           >
-
             <p className="text-xl leading-relaxed sm:text-2xl">
               Computer Science undergraduate specializing in Artificial Intelligence and Data
               Science. I build AI applications end to end — retrieval pipelines, agents and the

@@ -205,7 +205,10 @@ export function Contact() {
   const isLight = theme === "light";
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-background py-[14vh] sm:py-[20vh] transition-colors duration-500">
+    <section
+      id="contact"
+      className="relative overflow-hidden bg-background py-[14vh] sm:py-[20vh] transition-colors duration-500"
+    >
       {/* Volumetric LaserFlow Shader at Full Bottom Below Contact Button in Royal Indigo-Violet */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[52%] sm:h-[58%] z-0 overflow-hidden opacity-95 dark:opacity-90">
         <ClientOnly>
@@ -273,7 +276,9 @@ export function Contact() {
           >
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
             <span>ACCESS NEURAL DOSSIER // DOWNLOAD RESUME</span>
-            <span className="text-purple-400 transition-transform group-hover:translate-x-1">→</span>
+            <span className="text-purple-400 transition-transform group-hover:translate-x-1">
+              →
+            </span>
           </button>
         </div>
 

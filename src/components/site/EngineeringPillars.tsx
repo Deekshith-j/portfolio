@@ -4,7 +4,8 @@ const PILLARS = [
   {
     label: "AI Systems",
     value: "End-to-end",
-    detail: "Designing agents, LLM workflows and intelligent products from prototype to production.",
+    detail:
+      "Designing agents, LLM workflows and intelligent products from prototype to production.",
   },
   {
     label: "RAG & Retrieval",

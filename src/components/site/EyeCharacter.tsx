@@ -48,7 +48,10 @@ export function EyeCharacter() {
           <defs>
             <radialGradient id="shellGrad" cx="35%" cy="28%" r="80%">
               <stop offset="0%" stopColor="color-mix(in oklab, var(--mist) 85%, transparent)" />
-              <stop offset="100%" stopColor="color-mix(in oklab, var(--graphite) 92%, transparent)" />
+              <stop
+                offset="100%"
+                stopColor="color-mix(in oklab, var(--graphite) 92%, transparent)"
+              />
             </radialGradient>
           </defs>
 

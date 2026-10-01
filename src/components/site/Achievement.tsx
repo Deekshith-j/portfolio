@@ -111,7 +111,6 @@ export function Achievement() {
               </div>
             </motion.article>
           ))}
-
         </div>
 
         <Certificates />

@@ -35,7 +35,7 @@ export function useTheme() {
       }
       return currentTheme;
     },
-    () => "dark"
+    () => "dark",
   );
 
   useEffect(() => {
@@ -54,4 +54,3 @@ export function useTheme() {
 
   return { theme, toggle };
 }
-

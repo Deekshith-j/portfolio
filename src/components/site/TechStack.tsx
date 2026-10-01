@@ -11,7 +11,9 @@ export function TechStack() {
         <h2 className="display max-w-2xl text-[clamp(2.2rem,6vw,5rem)]">
           A technology constellation.
         </h2>
-        <p className="mt-5 text-sm text-muted-foreground">Drag or orbit to explore the technology constellation.</p>
+        <p className="mt-5 text-sm text-muted-foreground">
+          Drag or orbit to explore the technology constellation.
+        </p>
       </div>
       <div className="mt-6 h-[70svh] w-full">
         <ClientOnly>

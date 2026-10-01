@@ -7,13 +7,25 @@ export function Education() {
   const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   const POINTS = [
-    { year: "2025", label: "Programme begins", detail: "B.Tech — Artificial Intelligence and Data Science" },
-    { year: "Now", label: "In progress", detail: "Building AI applications with Python, RAG and LLMs" },
+    {
+      year: "2025",
+      label: "Programme begins",
+      detail: "B.Tech — Artificial Intelligence and Data Science",
+    },
+    {
+      year: "Now",
+      label: "In progress",
+      detail: "Building AI applications with Python, RAG and LLMs",
+    },
     { year: "2029", label: "Graduation", detail: "Sanjay Ghodawat University" },
   ];
 
   return (
-    <section ref={ref} id="education" className="relative bg-background/80 backdrop-blur-md py-[14vh]">
+    <section
+      ref={ref}
+      id="education"
+      className="relative bg-background/80 backdrop-blur-md py-[14vh]"
+    >
       <div className="mx-auto w-full max-w-[1500px] px-6 sm:px-10">
         <p className="eyebrow mb-12">Education</p>
 

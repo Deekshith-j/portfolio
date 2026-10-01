@@ -10,7 +10,13 @@ type Props = {
   size?: "sm" | "lg";
 };
 
-export function MagneticButton({ children, href, strength = 0.4, className = "", size = "sm" }: Props) {
+export function MagneticButton({
+  children,
+  href,
+  strength = 0.4,
+  className = "",
+  size = "sm",
+}: Props) {
   const ref = useRef<HTMLAnchorElement>(null);
   const [hover, setHover] = useState(false);
   const mx = useMotionValue(0);
@@ -35,7 +41,8 @@ export function MagneticButton({ children, href, strength = 0.4, className = "",
     setHover(false);
   };
 
-  const pad = size === "lg" ? "px-14 py-8 text-2xl sm:px-20 sm:py-10 sm:text-4xl" : "px-6 py-3 text-sm";
+  const pad =
+    size === "lg" ? "px-14 py-8 text-2xl sm:px-20 sm:py-10 sm:text-4xl" : "px-6 py-3 text-sm";
 
   return (
     <motion.a

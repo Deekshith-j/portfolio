@@ -119,8 +119,12 @@ export default function DarkVeil({
     if (!parent) return;
 
     const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-    const effectiveDpr = isMobile ? 1 : Math.min(typeof window !== "undefined" ? window.devicePixelRatio : 1, 1.25);
-    const effectiveResScale = isMobile ? Math.min(resolutionScale, 0.65) : Math.min(resolutionScale, 0.85);
+    const effectiveDpr = isMobile
+      ? 1
+      : Math.min(typeof window !== "undefined" ? window.devicePixelRatio : 1, 1.25);
+    const effectiveResScale = isMobile
+      ? Math.min(resolutionScale, 0.65)
+      : Math.min(resolutionScale, 0.85);
 
     let renderer: Renderer;
     try {
@@ -151,6 +155,18 @@ export default function DarkVeil({
       },
     });
 
+    interface DarkVeilUniforms {
+      uTime: { value: number };
+      uResolution: { value: Vec2 };
+      uHueShift: { value: number };
+      uNoise: { value: number };
+      uScan: { value: number };
+      uScanFreq: { value: number };
+      uWarp: { value: number };
+      uLightMode: { value: number };
+    }
+
+    const uniforms = program.uniforms as unknown as DarkVeilUniforms;
     const mesh = new Mesh(gl, { geometry, program });
 
     const resize = () => {
@@ -158,7 +174,7 @@ export default function DarkVeil({
       const w = parent.clientWidth || window.innerWidth;
       const h = parent.clientHeight || window.innerHeight;
       renderer.setSize(w * effectiveResScale, h * effectiveResScale);
-      program.uniforms.uResolution.value.set(w, h);
+      uniforms.uResolution.value.set(w, h);
     };
 
     window.addEventListener("resize", resize, { passive: true });
@@ -178,13 +194,13 @@ export default function DarkVeil({
 
     const loop = () => {
       if (isPaused) return;
-      program.uniforms.uTime.value = ((performance.now() - start) / 1000) * speed;
-      program.uniforms.uHueShift.value = hueShift;
-      program.uniforms.uNoise.value = noiseIntensity;
-      program.uniforms.uScan.value = scanlineIntensity;
-      program.uniforms.uScanFreq.value = scanlineFrequency;
-      program.uniforms.uWarp.value = warpAmount;
-      program.uniforms.uLightMode.value = lightMode ? 1 : 0;
+      uniforms.uTime.value = ((performance.now() - start) / 1000) * speed;
+      uniforms.uHueShift.value = hueShift;
+      uniforms.uNoise.value = noiseIntensity;
+      uniforms.uScan.value = scanlineIntensity;
+      uniforms.uScanFreq.value = scanlineFrequency;
+      uniforms.uWarp.value = warpAmount;
+      uniforms.uLightMode.value = lightMode ? 1 : 0;
       renderer.render({ scene: mesh });
       frame = requestAnimationFrame(loop);
     };

@@ -103,7 +103,8 @@ function Rig() {
 }
 
 export default function HeroScene() {
-  const dpr = typeof window !== "undefined" && window.innerWidth < 768 ? 1 : ([1, 1.75] as [number, number]);
+  const dpr =
+    typeof window !== "undefined" && window.innerWidth < 768 ? 1 : ([1, 1.75] as [number, number]);
   const mobile = typeof window !== "undefined" && window.innerWidth < 768;
   return (
     <Canvas

@@ -38,7 +38,11 @@ export function AISystems() {
   const glow = useTransform(scrollYProgress, [0.4, 0.9], [0, 0.5]);
 
   return (
-    <section ref={ref} id="ai-systems" className="relative bg-background/80 backdrop-blur-md py-[14vh]">
+    <section
+      ref={ref}
+      id="ai-systems"
+      className="relative bg-background/80 backdrop-blur-md py-[14vh]"
+    >
       <div className="mx-auto w-full max-w-[1500px] px-6 sm:px-10">
         <p className="eyebrow mb-10">AI Systems</p>
         <h2 className="display text-[clamp(2.6rem,10vw,9rem)] leading-[0.86]">

@@ -253,9 +253,7 @@ export function Certificates() {
   const reduce = useReducedMotion();
 
   const nav = useCallback((dir: 1 | -1) => {
-    setOpenIndex((cur) =>
-      cur === null ? cur : (cur + dir + CERTS.length) % CERTS.length
-    );
+    setOpenIndex((cur) => (cur === null ? cur : (cur + dir + CERTS.length) % CERTS.length));
   }, []);
 
   const total = CERTS.length;
@@ -313,14 +311,8 @@ export function Certificates() {
           {CERTS.map((c, i) => (
             <div
               key={c.title}
-              className={
-                i === 0 ? "relative" : "absolute bottom-0 left-1/2"
-              }
-              style={
-                i === 0
-                  ? undefined
-                  : { transform: "translateX(-50%)" }
-              }
+              className={i === 0 ? "relative" : "absolute bottom-0 left-1/2"}
+              style={i === 0 ? undefined : { transform: "translateX(-50%)" }}
             >
               <FanCard
                 cert={c}
@@ -336,11 +328,7 @@ export function Certificates() {
 
       <AnimatePresence>
         {openIndex !== null && (
-          <Lightbox
-            index={openIndex}
-            onClose={() => setOpenIndex(null)}
-            onNav={nav}
-          />
+          <Lightbox index={openIndex} onClose={() => setOpenIndex(null)} onNav={nav} />
         )}
       </AnimatePresence>
     </div>

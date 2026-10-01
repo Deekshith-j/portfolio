@@ -262,6 +262,31 @@ export interface LaserFlowProps {
   backgroundColor?: string;
 }
 
+interface LaserFlowUniforms {
+  iTime: { value: number };
+  iResolution: { value: THREE.Vector3 };
+  iMouse: { value: THREE.Vector4 };
+  uWispDensity: { value: number };
+  uTiltScale: { value: number };
+  uFlowTime: { value: number };
+  uFogTime: { value: number };
+  uBeamXFrac: { value: number };
+  uBeamYFrac: { value: number };
+  uFlowSpeed: { value: number };
+  uVLenFactor: { value: number };
+  uHLenFactor: { value: number };
+  uFogIntensity: { value: number };
+  uFogScale: { value: number };
+  uWSpeed: { value: number };
+  uWIntensity: { value: number };
+  uFlowStrength: { value: number };
+  uDecay: { value: number };
+  uFalloffStart: { value: number };
+  uFogFallSpeed: { value: number };
+  uColor: { value: THREE.Vector3 };
+  uFade: { value: number };
+}
+
 export const LaserFlow: React.FC<LaserFlowProps> = ({
   className,
   style,
@@ -287,7 +312,7 @@ export const LaserFlow: React.FC<LaserFlowProps> = ({
 }) => {
   const mountRef = useRef<HTMLDivElement | null>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
-  const uniformsRef = useRef<Record<string, { value: any }> | null>(null);
+  const uniformsRef = useRef<LaserFlowUniforms | null>(null);
   const hasFadedRef = useRef(false);
   const rectRef = useRef<DOMRect | null>(null);
   const baseDprRef = useRef(1);
@@ -328,7 +353,10 @@ export const LaserFlow: React.FC<LaserFlowProps> = ({
     });
     rendererRef.current = renderer;
 
-    baseDprRef.current = Math.min(dpr ?? (typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1), 2);
+    baseDprRef.current = Math.min(
+      dpr ?? (typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1),
+      2,
+    );
     currentDprRef.current = baseDprRef.current;
 
     renderer.setPixelRatio(currentDprRef.current);
@@ -357,10 +385,10 @@ export const LaserFlow: React.FC<LaserFlowProps> = ({
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute(
       "position",
-      new THREE.BufferAttribute(new Float32Array([-1, -1, 0, 3, -1, 0, -1, 3, 0]), 3)
+      new THREE.BufferAttribute(new Float32Array([-1, -1, 0, 3, -1, 0, -1, 3, 0]), 3),
     );
 
-    const uniforms: Record<string, { value: any }> = {
+    const uniforms: LaserFlowUniforms = {
       iTime: { value: 0 },
       iResolution: { value: new THREE.Vector3(1, 1, 1) },
       iMouse: { value: new THREE.Vector4(0, 0, 0, 0) },
@@ -389,7 +417,7 @@ export const LaserFlow: React.FC<LaserFlowProps> = ({
     const material = new THREE.RawShaderMaterial({
       vertexShader: VERT,
       fragmentShader: FRAG,
-      uniforms,
+      uniforms: uniforms as unknown as Record<string, THREE.IUniform>,
       transparent: false,
       depthTest: false,
       depthWrite: false,
@@ -444,7 +472,7 @@ export const LaserFlow: React.FC<LaserFlowProps> = ({
       (entries) => {
         inViewRef.current = entries[0]?.isIntersecting ?? true;
       },
-      { root: null, threshold: 0 }
+      { root: null, threshold: 0 },
     );
     io.observe(mount);
 
@@ -464,7 +492,7 @@ export const LaserFlow: React.FC<LaserFlowProps> = ({
     };
     const onMove = (ev: PointerEvent) => updateMouse(ev.clientX, ev.clientY);
     const onLeave = () => mouseTarget.set(0, 0);
-    
+
     // Listen on window as well for seamless hover interaction
     window.addEventListener("pointermove", onMove, { passive: true });
     canvas.addEventListener("pointerdown", onMove, { passive: true });
@@ -511,7 +539,10 @@ export const LaserFlow: React.FC<LaserFlowProps> = ({
         next = clamp(currentDprRef.current * 1.1, dprFloor, base);
       }
 
-      if (Math.abs(next - currentDprRef.current) > 0.01 && now - lastDprChangeRef > dprChangeCooldown) {
+      if (
+        Math.abs(next - currentDprRef.current) > 0.01 &&
+        now - lastDprChangeRef > dprChangeCooldown
+      ) {
         currentDprRef.current = next;
         lastDprChangeRef = now;
         setSizeNow();

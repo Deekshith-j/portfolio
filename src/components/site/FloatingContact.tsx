@@ -31,7 +31,10 @@ export function FloatingContact() {
   if (!visible) return null;
 
   return (
-    <div ref={ref} className="fixed bottom-18 right-4 z-40 flex flex-col items-end gap-3 sm:bottom-7 sm:right-7">
+    <div
+      ref={ref}
+      className="fixed bottom-18 right-4 z-40 flex flex-col items-end gap-3 sm:bottom-7 sm:right-7"
+    >
       <AnimatePresence>
         {open && (
           <>
@@ -47,7 +50,9 @@ export function FloatingContact() {
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-background shadow-sm">
                 <Mail size={14} className="stroke-[2.2]" />
               </span>
-              <span className="text-[0.68rem] uppercase tracking-[0.18em] text-foreground font-bold">Email</span>
+              <span className="text-[0.68rem] uppercase tracking-[0.18em] text-foreground font-bold">
+                Email
+              </span>
             </motion.a>
             <motion.a
               key="wa"
@@ -63,7 +68,9 @@ export function FloatingContact() {
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#25D366] text-white shadow-sm">
                 <MessageCircle size={14} className="stroke-[2.2]" />
               </span>
-              <span className="text-[0.68rem] uppercase tracking-[0.18em] text-foreground font-bold">WhatsApp</span>
+              <span className="text-[0.68rem] uppercase tracking-[0.18em] text-foreground font-bold">
+                WhatsApp
+              </span>
             </motion.a>
           </>
         )}
@@ -84,7 +91,11 @@ export function FloatingContact() {
           </span>
         )}
         <motion.span animate={{ rotate: open ? 90 : 0 }} transition={spring} className="flex">
-          {open ? <X size={22} className="stroke-[2.5]" /> : <MessageCircle size={22} className="stroke-[2.5]" />}
+          {open ? (
+            <X size={22} className="stroke-[2.5]" />
+          ) : (
+            <MessageCircle size={22} className="stroke-[2.5]" />
+          )}
         </motion.span>
       </motion.button>
     </div>

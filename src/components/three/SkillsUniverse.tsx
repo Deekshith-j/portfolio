@@ -76,7 +76,13 @@ function Orbit() {
     <group ref={group}>
       <Core />
       <Billboard>
-        <Text fontSize={0.34} color="#f2f2f4" anchorX="center" anchorY="middle" position={[0, 0, 1.1]}>
+        <Text
+          fontSize={0.34}
+          color="#f2f2f4"
+          anchorX="center"
+          anchorY="middle"
+          position={[0, 0, 1.1]}
+        >
           AI
         </Text>
       </Billboard>

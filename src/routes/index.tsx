@@ -91,7 +91,6 @@ function Index() {
         </ClientOnly>
       </div>
 
-
       <Nav />
       <Hero />
       <About />
@@ -107,4 +106,3 @@ function Index() {
     </main>
   );
 }
-

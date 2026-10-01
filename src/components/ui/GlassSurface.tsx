@@ -24,7 +24,7 @@ export interface GlassSurfaceProps {
   contentClassName?: string;
   style?: React.CSSProperties;
   onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 }
 
 export const GlassSurface: React.FC<GlassSurfaceProps> = ({
@@ -60,7 +60,7 @@ export const GlassSurface: React.FC<GlassSurfaceProps> = ({
   const [svgSupported, setSvgSupported] = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
-  const feImageRef = useRef<SVGFeImageElement>(null);
+  const feImageRef = useRef<SVGFEImageElement>(null);
   const redChannelRef = useRef<SVGFEDisplacementMapElement>(null);
   const greenChannelRef = useRef<SVGFEDisplacementMapElement>(null);
   const blueChannelRef = useRef<SVGFEDisplacementMapElement>(null);
@@ -70,7 +70,8 @@ export const GlassSurface: React.FC<GlassSurfaceProps> = ({
     const rect = containerRef.current?.getBoundingClientRect();
     const actualWidth = Math.max(rect?.width || 400, 10);
     const actualHeight = Math.max(rect?.height || 200, 10);
-    const radiusNum = typeof borderRadius === "number" ? borderRadius : parseInt(String(borderRadius), 10) || 20;
+    const radiusNum =
+      typeof borderRadius === "number" ? borderRadius : parseInt(String(borderRadius), 10) || 20;
     const edgeSize = Math.min(actualWidth, actualHeight) * (borderWidth * 0.5);
 
     const svgContent = `
@@ -188,10 +189,31 @@ export const GlassSurface: React.FC<GlassSurfaceProps> = ({
     >
       <svg className="glass-surface__filter" xmlns="http://www.w3.org/2000/svg" aria-hidden>
         <defs>
-          <filter id={filterId} colorInterpolationFilters="sRGB" x="0%" y="0%" width="100%" height="100%">
-            <feImage ref={feImageRef} x="0" y="0" width="100%" height="100%" preserveAspectRatio="none" result="map" />
+          <filter
+            id={filterId}
+            colorInterpolationFilters="sRGB"
+            x="0%"
+            y="0%"
+            width="100%"
+            height="100%"
+          >
+            <feImage
+              ref={feImageRef}
+              x="0"
+              y="0"
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              result="map"
+            />
 
-            <feDisplacementMap ref={redChannelRef} in="SourceGraphic" in2="map" id="redchannel" result="dispRed" />
+            <feDisplacementMap
+              ref={redChannelRef}
+              in="SourceGraphic"
+              in2="map"
+              id="redchannel"
+              result="dispRed"
+            />
             <feColorMatrix
               in="dispRed"
               type="matrix"
@@ -219,7 +241,13 @@ export const GlassSurface: React.FC<GlassSurfaceProps> = ({
               result="green"
             />
 
-            <feDisplacementMap ref={blueChannelRef} in="SourceGraphic" in2="map" id="bluechannel" result="dispBlue" />
+            <feDisplacementMap
+              ref={blueChannelRef}
+              in="SourceGraphic"
+              in2="map"
+              id="bluechannel"
+              result="dispBlue"
+            />
             <feColorMatrix
               in="dispBlue"
               type="matrix"

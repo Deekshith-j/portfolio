@@ -22,10 +22,7 @@ export function Hero() {
       className="relative min-h-[620px] sm:min-h-[660px] max-h-[1100px] h-[100svh] w-full bg-[#f5f5f8] dark:bg-[#050507] text-[#16161a] dark:text-[#f2f2f5] overflow-hidden flex flex-col justify-between pt-16 sm:pt-20 pb-20 sm:pb-28 px-5 sm:px-12 lg:px-16 select-none transition-colors duration-500"
     >
       {/* 1. Atmospheric Purple / Lavender Lighting */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
-      >
+      <div aria-hidden className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div
           className="absolute h-[500px] w-[500px] sm:h-[850px] sm:w-[850px] -top-24 left-1/2 -translate-x-1/2 rounded-full opacity-55 dark:opacity-60 blur-[100px] sm:blur-[130px] transition-all duration-700"
           style={{
@@ -59,7 +56,6 @@ export function Hero() {
       >
         {/* Center Editorial Stage: Massive Typography Layer + Info Block + Overlapping Portrait */}
         <div className="relative w-full flex-1 flex items-center justify-center my-auto min-h-[360px] sm:min-h-[440px]">
-          
           {/* BACKGROUND TYPOGRAPHY & BIO BLOCK */}
           <motion.div
             style={{ y: textParallax }}
@@ -76,7 +72,8 @@ export function Hero() {
                   <span>AI & MACHINE LEARNING ENGINEER</span>
                 </div>
                 <p className="font-sans text-[0.72rem] sm:text-[0.84rem] leading-relaxed text-foreground/90 dark:text-white/85 font-normal">
-                  Computer Science undergraduate specializing in AI & Data Science. Engineering Grounded RAG, autonomous agent architectures & scalable production systems.
+                  Computer Science undergraduate specializing in AI & Data Science. Engineering
+                  Grounded RAG, autonomous agent architectures & scalable production systems.
                 </p>
 
                 {/* Creative Dossier Action Button */}
@@ -88,14 +85,20 @@ export function Hero() {
                   >
                     <span className="h-1.5 w-1.5 rounded-full bg-purple-500 animate-pulse" />
                     <span>ACCESS NEURAL DOSSIER // CV</span>
-                    <span className="text-purple-400 transition-transform group-hover:translate-x-0.5">→</span>
+                    <span className="text-purple-400 transition-transform group-hover:translate-x-0.5">
+                      →
+                    </span>
                   </button>
                 </div>
               </div>
 
               <div className="flex flex-row sm:flex-col items-center sm:items-end justify-between sm:justify-center font-mono text-[0.54rem] sm:text-[0.64rem] tracking-[0.2em] sm:tracking-[0.26em] text-muted-foreground uppercase pt-1 sm:pt-0">
-                <span className="font-semibold text-foreground/75 dark:text-white/65">OPENAI × NXTWAVE FINALIST</span>
-                <span className="text-[0.52rem] sm:text-[0.54rem] text-muted-foreground/80 mt-0.5">BENGALURU, INDIA • 2026</span>
+                <span className="font-semibold text-foreground/75 dark:text-white/65">
+                  OPENAI × NXTWAVE FINALIST
+                </span>
+                <span className="text-[0.52rem] sm:text-[0.54rem] text-muted-foreground/80 mt-0.5">
+                  BENGALURU, INDIA • 2026
+                </span>
               </div>
             </div>
 
@@ -132,7 +135,6 @@ export function Hero() {
               className="h-full w-full object-contain object-bottom filter contrast-[1.08] brightness-[0.98] drop-shadow-[0_20px_45px_rgba(0,0,0,0.22)] dark:drop-shadow-[0_25px_60px_rgba(0,0,0,0.98)] pointer-events-none opacity-85 sm:opacity-100"
             />
           </motion.div>
-
         </div>
 
         {/* Bottom: Subtle editorial coordinates & link */}
@@ -150,12 +152,13 @@ export function Hero() {
             href="#work"
             className="group font-mono text-[0.58rem] sm:text-[0.72rem] tracking-[0.2em] sm:tracking-[0.24em] text-foreground/75 dark:text-white/70 hover:text-foreground dark:hover:text-white uppercase transition-colors flex items-center gap-1.5 sm:gap-2"
           >
-            <span className="hidden xs:inline">BUILDING INTELLIGENT SYSTEMS FOR THE REAL WORLD</span>
+            <span className="hidden xs:inline">
+              BUILDING INTELLIGENT SYSTEMS FOR THE REAL WORLD
+            </span>
             <span className="xs:hidden">SELECTED WORK</span>
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </a>
         </motion.div>
-
       </motion.div>
     </section>
   );
